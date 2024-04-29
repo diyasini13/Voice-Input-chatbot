@@ -22,6 +22,8 @@
 
 .container {
     /* width: 80%; */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
     margin: 0 auto; /* This centers the container horizontally */
     /* text-align: center;  */
 }
@@ -31,3 +33,19 @@
     justify-content: space-between;
     gap: 10px;
 }
+
+#send {
+    background-color: #4CAF50; /* Green send button */
+    color: white;
+    margin-left: 5px; /* Slight spacing between buttons */
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px; /* More padding for buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
