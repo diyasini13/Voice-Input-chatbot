@@ -13,7 +13,7 @@ recognition.interimResults = true; // Show interim results
 
 
 
-TOKEN = "ya29.a0Ad52N39zz7l_TLzSgvFC9TSXIx8BTnUW8un2-NrANCiRr-3EjTASXh2xacTEU-I9M4wtHRyiWInt9kl_YtDSLyg5sDqnMM4yBBmGa32iB-brgkMWQon4N4wHhceU-KTgdcUhBXs-zGLbrR4odZHAh3FhVTye2pthflxUDrIlwL1x2yjRKdYHqmlhCMZKgEJJ6nncIMGvSa3beTr1hqS7hCqmPiavV7j4alpdgBND_3CYqb3rbvUbOSBRfLT7ud6810wTReWvTLUWxZCiNskBZ-xki3AIMdkATgeo4SoFkZvSsFqngKX4J8_xiKHOqw-unAseaRdrf9JQlQqtHTExfHFBAR5vPxKtTkleJqfronb4GowUSysJk4h3nfJDAu_xXflAldReOAt3158ToKehuSs98gtNmQwXaCgYKARESARASFQHGX2Mi-IKBztlSUoz3BOdYfCBrvA0423"
+TOKEN = "[Google access token]"
 
 
 
