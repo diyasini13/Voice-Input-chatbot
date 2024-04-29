@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Voice Chatbox</title>
+    <!-- <style>
+        /* Basic styling for the chatbox */
+        #chatbox { border: 1px solid #ccc; padding: 10px; width: 300px; }
+        #messageInput { width: 100%; padding: 5px; }
+        #messages { list-style: none; padding: 0; margin-top: 10px; }
+        #messages li { margin-bottom: 5px; }
+    </style> -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="chatbox" class="container">
+        <h1>Fantasy Cricket</h1>
+        <ul id="messages"></ul>
+        <div class="flex-container">
+            <input type="text" id="messageInput">
+            <button id="listen"><i class="fa fa-microphone" style="font-size:16px"></i></button>
+            <button id="send"><i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
