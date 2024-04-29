@@ -13,7 +13,7 @@ recognition.interimResults = true; // Show interim results
 
 
 
-TOKEN = "ya29.a0Ad52N39UYwJtrlb3WedBnGEIKrB-DNqmDKVs5PxS9TCCYTtrga7JdaiBG7GVVWfn_GBB3jEErAc-gJRffMIHA1ft2YLELgfjIGK94fDpp7rJo4hvnf_fgVuaCE7qQLbq8CNVPgB9BZS2Ojj9rFg8li-EhHJIyly8jSveyKyWEgaCgYKAegSARASFQHGX2MizesNSw1u5wWwRzZyLoBn5g0177"
+TOKEN = "[Google Cloud Access Token]"
 
 
 
