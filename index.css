@@ -4,6 +4,27 @@
     padding: 10px;
     width: 50%;
 }
+#chatbox h1 {
+  
+       
+    margin: 0;
+    font-size: 24px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    
+    border-bottom: 1px solid #ccc;
+}
+
+#logo-container {
+    text-align: center;  /* Center the logo within the container */
+    margin-bottom: 20px; /* Add some spacing below the logo */
+}
+
+#logo-container img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto;  /* Maintain aspect ratio */
+}
 
 #messageInput {
     width: 100%;
@@ -18,6 +39,9 @@
 
 #messages li {
     margin-bottom: 5px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 .container {
