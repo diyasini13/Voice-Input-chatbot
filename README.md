@@ -8,9 +8,9 @@ Architecture:
 
 To run the code:
 1. clone the github repository
-2. In the calldialogflowapi function give your own project name, agent id and location to the api to connect to your own dialogflow chatbot
+2. In the calldialogflowapi function give your own project ID, agent id and location to the api to connect to your own dialogflow chatbot.You can get these DialogFlow CX API details by selecting "COPY NAME" (https://i.stack.imgur.com/QTZxm.png ) option of the agent.
 3. Get the access token from Google cloud using (gcloud auth print-access-token) - this is temporary and is valid for 1 hr
-4. enter this access token in TOKEN variable in the index.js file.
+4. Enter this access token in TOKEN variable in the index.js file.
 5. You can run the files using (python3 -m http.server 8000) in the cloud shell
 
 
