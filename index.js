@@ -10,7 +10,7 @@ let recordingStatus = { isRecording: false, mediaRecorder: null }; // Define rec
 // API_KEY = 'AIzaSyDHmK5lKzxWGWO-rMKnec5n0Qm7edE5ESo'
 // CLIENT_ID = '<846492264424-6bpkek70bnv1kuou9um4da1bqf0sjdd4.apps.googleusercontent.com'
 
-TOKEN = "ya29.a0AXooCgsSsbJte0fJvN0ub73846SLH5TbmqAH7LNe9JPb9x3k3cd2F38miMZL_VY2EdP88D9Ha3VQVmgqJ37i2dO8ugozFeEgNGBkzbJGggjWbVbUbVWW_xkOzcMQGgh88TB5qza5EpaLHr_dn9hNX3K66_kbeGPNqn-oQlFvgL9R0v7vZXZ9AcZlJVRBqdub95PyTrhXbgf2uyJKwl34Iok4qhX6lwDN91A0fQRDiS-YC9QEFeHYVKjcoCZv_8D22jU51k9sk-lLfmVFtIU5SAf7C69fBpIjAdWuRfLv0ez5NNblvBJrU_V9aAEnwSoVZq1BOMh3GtlFahYzvyvZGyDW2i_Mq9NOmb6NMGKPuTNevIc3g-VweKn3JhZcJRMdj1sdVDcb0rEuXq2krnKwyWi6RjqZFTYGaCgYKATwSARASFQHGX2MiJIHdCAIgzt0CaqkWFejqvg0423";
+TOKEN = "[TOKEN]";
 let DETECTED_LANGUAGE = "en"
 
 
@@ -321,7 +321,7 @@ async function synthesizeSpeech(text, isSSMl = false) {
 
 function callDialogflowAPI(userMessage) {
     // Dialogflow API endpoint
-    const apiUrl = `https://global-dialogflow.googleapis.com/v3/projects/search-conversation/locations/global/agents/db219c9f-e50e-4e1e-850c-e7a4f738f88f/sessions/${SESSION_ID}:detectIntent`;
+    const apiUrl = `https://global-dialogflow.googleapis.com/v3/projects/[PROJECT-ID]/locations/global/agents/[AGENT-ID]/sessions/${SESSION_ID}:detectIntent`;
 
     // API request data
     const requestData = {
