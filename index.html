@@ -18,9 +18,7 @@
 </head>
 
 <body>
-    <div id="logo-container">
-        <img src="Dream11_Vertical_WhiteonRedBG.jpg" alt="Dream11 Logo" /> 
-    </div>
+    
     <div id="chatbox" class="container">
         <h1>Fantasy Cricket</h1>
         <ul id="messages"></ul>
@@ -30,9 +28,15 @@
             <button id="send"><i class="fa fa-paper-plane" style="font-size:16px"></i></button>
         </div>
     </div>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
 
-
-    <script src="index.js"></script>
+    <script type="module"  src="index.js"></script>
 </body>
 
 </html>
