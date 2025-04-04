@@ -1,4 +1,5 @@
 
+
 const chatbox = document.getElementById("chatbox");
 const messageInput = document.getElementById("messageInput");
 const messagesList = document.getElementById("messages");
@@ -7,12 +8,17 @@ listenButton.style.backgroundColor = "#e6e6e6";
 const sendButton = document.getElementById("send");
 let recordingStatus = { isRecording: false, mediaRecorder: null }; // Define recordingStatus variable
 
-// API_KEY = 'AIzaSyDHmK5lKzxWGWO-rMKnec5n0Qm7edE5ESo'
-// CLIENT_ID = '<846492264424-6bpkek70bnv1kuou9um4da1bqf0sjdd4.apps.googleusercontent.com'
 
-TOKEN = "";
+
+
+let TOKEN = "[enter token]";
 let DETECTED_LANGUAGE = "en"
+let PROJECT_ID = "[enter project id]"
+let AGENT_ID="[enter agent id]"
 
+
+
+//-----------------------------------------------------------------------------------------------
 
 function generateSessionId(length) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -24,7 +30,7 @@ function generateSessionId(length) {
     return sessionId;
 }
 
-SESSION_ID = generateSessionId(6)
+let SESSION_ID = generateSessionId(6)
 
 
 //Start Recording using browser mic
@@ -36,13 +42,7 @@ function startRecording() {
             };
             const mediaRecorder = new MediaRecorder(stream, options);
 
-            // mediaRecorder.ondataavailable = function (event) {
-            //     const blob = event.data;
-
-            //     const encoding = blob.type;
-
-            //     console.log("ENCODING: ", encoding);
-            // };
+            
             recordingStatus.mediaRecorder = mediaRecorder;
 
             const audioChunks = [];
@@ -109,7 +109,7 @@ async function convertAudioToText(audioData) {
     };
     const headers = {
         "Content-Type": "application/json",
-        'x-goog-user-project': 'search-conversation',
+        'x-goog-user-project': PROJECT_ID,
         'Authorization': 'Bearer ' + TOKEN
     };
     try {
@@ -156,7 +156,7 @@ async function detectLanguageFromText(text) {
 
     const headers = {
         "Content-Type": "application/json",
-        'x-goog-user-project': 'search-conversation',
+        'x-goog-user-project': PROJECT_ID,
         'Authorization': 'Bearer ' + TOKEN
     };
     let detectedLanguage = "en"
@@ -203,7 +203,7 @@ async function translateText(text, toLanguage) {
 
     const headers = {
         "Content-Type": "application/json",
-        'x-goog-user-project': 'search-conversation',
+        'x-goog-user-project': PROJECT_ID,
         'Authorization': 'Bearer ' + TOKEN
     };
     let translatedTextOutput = ""
@@ -278,7 +278,7 @@ async function synthesizeSpeech(text, isSSMl = false) {
         },
         voice: {
             languageCode: DETECTED_LANGUAGE, // Use Hindi language code
-            name: DETECTED_LANGUAGE + "-IN-Wavenet-A", // Use Hindi Wavenet voice
+            name:  DETECTED_LANGUAGE + "-IN-Wavenet-A", // Use Hindi Wavenet voice
         },
         audioConfig: {
             audioEncoding: "LINEAR16",
@@ -292,7 +292,7 @@ async function synthesizeSpeech(text, isSSMl = false) {
 
     const headers = {
         "Content-Type": "application/json",
-        'x-goog-user-project': 'search-conversation',
+        'x-goog-user-project': PROJECT_ID,
         'Authorization': 'Bearer ' + TOKEN
     };
 
@@ -321,7 +321,7 @@ async function synthesizeSpeech(text, isSSMl = false) {
 
 function callDialogflowAPI(userMessage) {
     // Dialogflow API endpoint
-    const apiUrl = `https://global-dialogflow.googleapis.com/v3/projects/search-conversation/locations/global/agents/db219c9f-e50e-4e1e-850c-e7a4f738f88f/sessions/${SESSION_ID}:detectIntent`;
+    const apiUrl = `https://global-dialogflow.googleapis.com/v3/projects/${PROJECT_ID}/locations/global/agents/${AGENT_ID}/sessions/${SESSION_ID}:detectIntent`;
 
     // API request data
     const requestData = {
@@ -339,7 +339,7 @@ function callDialogflowAPI(userMessage) {
     // API request headers
     const headers = {
         'Content-Type': 'application/json; charset=utf-8',
-        'x-goog-user-project': 'search-conversation',
+        'x-goog-user-project': PROJECT_ID,
         'Authorization': 'Bearer ' + TOKEN
     };
 
