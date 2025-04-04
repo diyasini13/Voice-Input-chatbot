@@ -8,9 +8,9 @@ Architecture:
 
 To run the code:
 1. clone the github repository
-2.Get the access token from Google cloud using (gcloud auth print-access-token) - this is temporary and is valid for 1 hr
-3.Enter the values in the Project_ID , Agent_ID and TOKEN in the index.js file.
-4. You can run the files using (python3 -m http.server 8000) in the cloud shell
+2. Get the access token from Google cloud using (gcloud auth print-access-token) - this is temporary and is valid for 1 hr.
+3. Enter the values in the Project_ID , Agent_ID and TOKEN in the index.js file.
+4. You can run the files using (python3 -m http.server 8000) in the cloud shell.
 
 
  Github hosted page:
